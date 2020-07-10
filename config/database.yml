@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: railsgirls_production
-  username: railsgirls
-  password: <%= ENV['RAILSGIRLS_DATABASE_PASSWORD'] %>
+  pool: 5
